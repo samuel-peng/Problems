@@ -22,3 +22,10 @@ Here is the catalog:
 [POJ1860](http://poj.org/problem?id=1860)  [POJ3259](http://poj.org/problem?id=3259)  [POJ1062](http://poj.org/problem?id=1062)  [POJ2253](http://poj.org/problem?id=2253)  [POJ1125](http://poj.org/problem?id=1125)  [POJ2240](http://poj.org/problem?id=2240)
 ###Minimum Spanning Tree 最小生成树 (Prim, Kruskal)
 [POJ1789](http://poj.org/problem?id=1789)  [POJ2485](http://poj.org/problem?id=2485)  [POJ1258](http://poj.org/problem?id=1258)  [POJ3026](http://poj.org/problem?id=3026)
+###Topological Sorting 拓扑排序
+[POJ1094](http://poj.org/problem?id=1094)
+###Hungarian Algorithm 匈牙利算法
+[POJ3041](http://poj.org/problem?id=3041)  [POJ3020](http://poj.org/problem?id=3020)
+###KM Algorithm 最大流的增广路算法
+[POJ1459](http://poj.org/problem?id=1459)  [POJ3436](http://poj.org/problem?id=3436)
+##INITIAL · DATA STRUCTURE
