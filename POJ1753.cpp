@@ -10,7 +10,7 @@
 #include <cstdio>
 
 using namespace std;
-int ftime=33;
+int ftime=33;//Final Time, max should be 32
 bool chess[4][4];
 char input;
 void init()
@@ -22,14 +22,14 @@ void init()
         {
             scanf( "%c" , &input );
             if(input=='w')
-                chess[i][j]=0;
+                chess[i][j]=0;//If white then false
             else
-                chess[i][j]=1;
+                chess[i][j]=1;//If black then true
         }
-        scanf("%c",&input);
+        scanf("%c",&input);//For inputing the '\n'
     }
 }
-bool check()
+bool check()//Whether the colors are the same
 {
     if(chess[0][0])
         for(int i = 0 ; i < 4 ; i++)
@@ -41,9 +41,10 @@ bool check()
                 if(chess[i][j]) return false;
     return true;
 }
-void flip(int i, int j)
+void flip(int i, int j)//flip one chessman
 {
     chess[i][j]=!chess[i][j];
+    //if the i-1, j-1, i+1, or j+1 doesn't exist, then don't flip
     if(i) chess[i-1][j]=!chess[i-1][j];
     if(j) chess[i][j-1]=!chess[i][j-1];
     if(i<3) chess[i+1][j]=!chess[i+1][j];
@@ -51,7 +52,7 @@ void flip(int i, int j)
 }
 void ptconvert(int pt)
 {
-    flip(pt/4,pt%4);
+    flip(pt/4,pt%4); //Convert point number to coordinate
 }
 void search(int c,int b)
 {
@@ -68,9 +69,9 @@ void search(int c,int b)
 }
 int main()
 {
-    init();
-    search(0,0);
-    if(ftime==33) printf("Impossible\n");
+    init();//Input & Initial Operations
+    search(0,0);//Begin searching with chessman no.0 and 0 time of flippng
+    if(ftime==33) printf("Impossible\n");//If ftime>max able flipping times, then impossible
     else printf("%d\n",ftime);
     return 0;
 }
